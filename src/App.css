@@ -8,6 +8,24 @@
   height: 100vh;
 }
 
+.Start {
+  position: fixed;
+  top: 50%;
+  left: 45%;
+  margin-top: -100px;
+}
+
+.Start > button:hover {
+  background-color: transparent;
+  border: groove;
+}
+
+p {
+  color: #ffffff;
+  text-align: right;
+  text-decoration: underline;
+}
+
 button {
   color: #ffffff;
   font-size: 30px;
@@ -131,6 +149,13 @@ li {
     background-color: rgb(0, 74, 99);
   }
 
+  .Start {
+    position: fixed;
+    top: 35%;
+    left: 20%;
+    animation-delay: 3s;
+  }
+
   button {
     color: #ffffff;
     font-size: 50px;
@@ -144,15 +169,15 @@ li {
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 50px;
-    top: 750px;
+    left: 10px;
+    top: 600px;
   }
 
   .two {
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 100px;
+    left: 50px;
     top: 30px;
   }
 
@@ -160,8 +185,8 @@ li {
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 330px;
-    top: 150px;
+    left: 280px;
+    top: 100px;
   }
 
   .four {
@@ -169,7 +194,7 @@ li {
     width: 20px;
     height: 20px;
     left: 30px;
-    top: 250px;
+    top: 200px;
   }
 
   .five {
@@ -177,50 +202,50 @@ li {
     width: 20px;
     height: 20px;
     left: 20px;
-    top: 490px;
+    top: 450px;
   }
 
   .six {
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 150px;
-    top: 600px;
+    left: 100px;
+    top: 550px;
   }
 
   .seven {
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 200px;
-    top: 300px;
+    left: 150px;
+    top: 250px;
   }
 
   .eight {
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 300px;
-    top: 490px;
+    left: 250px;
+    top: 440px;
   }
 
   .nine {
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 290px;
-    top: 700px;
+    left: 240px;
+    top: 600px;
   }
   .showValue {
     background-color: transparent;
     position: absolute;
     left: 50px;
-    top: 800px;
+    top: 700px;
   }
   .Time {
     background-color: transparent;
     position: absolute;
     left: 250px;
-    top: 800px;
+    top: 700px;
   }
 }

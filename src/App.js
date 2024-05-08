@@ -6,6 +6,7 @@ const App = () => {
   const [getValues, setGetValues] = useState([]);
   const [increment, setIncrement] = useState(1);
   const [seconds, setSeconds] = useState(0);
+  const [start, setStart] = useState(false);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -16,13 +17,14 @@ const App = () => {
   };
 
   //Timer function
-  useEffect(() => {
+  const handleStart = () => {
+    setStart(true);
     const intervalId = setInterval(() => {
       setSeconds((prevSeconds) => prevSeconds + 1);
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  };
 
   useEffect(() => {
     if (seconds === 30) {
@@ -56,7 +58,9 @@ const App = () => {
 
         //Condition to finish the first level to call suffle to create new order
         if (getValues.length == 8) {
-          alert(`Great you have successfuly finished this level at ${seconds} sec. Here is the next level`);
+          alert(
+            `Great you have successfuly finished this level at ${seconds} sec. Here is the next level`
+          );
           handleShuffle(numbers);
         }
       } else {
@@ -74,95 +78,95 @@ const App = () => {
 
   return (
     <div className="myApp">
-      <div className="one">
-        <button
-          value={numbers[0]}
-          className="button1"
-          onClick={(e) => handleClick(e)}
-        >
-          {numbers[0]}
-        </button>
-      </div>
-      <div className="two">
-        <button
-          value={numbers[1]}
-          className="button1"
-          onClick={(e) => handleClick(e)}
-        >
-          {numbers[1]}
-        </button>
-      </div>
-      <div className="three">
-        <button
-          value={numbers[2]}
-          className="button2"
-          onClick={(e) => handleClick(e)}
-        >
-          {numbers[2]}
-        </button>
-      </div>
-      <div className="four">
-        <button
-          value={numbers[3]}
-          className="button3"
-          onClick={(e) => handleClick(e)}
-        >
-          {numbers[3]}
-        </button>
-      </div>
-      <div className="five">
-        <button
-          value={numbers[4]}
-          className="button4"
-          onClick={(e) => handleClick(e)}
-        >
-          {numbers[4]}
-        </button>
-      </div>
-      <div className="six">
-        <button
-          value={numbers[5]}
-          className="button5"
-          onClick={(e) => handleClick(e)}
-        >
-          {numbers[5]}
-        </button>
-      </div>
-      <div className="seven">
-        <button
-          value={numbers[6]}
-          className="button6"
-          onClick={(e) => handleClick(e)}
-        >
-          {numbers[6]}
-        </button>
-      </div>
-      <div className="eight">
-        <button
-          value={numbers[7]}
-          className="button7"
-          onClick={(e) => handleClick(e)}
-        >
-          {numbers[7]}
-        </button>
-      </div>
-      <div className="nine">
-        <button
-          value={numbers[8]}
-          className="button8"
-          onClick={(e) => handleClick(e)}
-        >
-          {numbers[8]}
-        </button>
-      </div>
-      <div className="showValue">
-        <ul>
-          {getValues.map((val, index) => (
-            <li key={index}>{val}</li>
-          ))}
-        </ul>
-      </div>
-      <div className="Time">{formatTime(seconds)}</div>
+      {!start && (
+        <div className="Start">
+          <button onClick={handleStart}>
+            <h1>Start</h1>
+          </button>
+          <p>Select numbers in the order to pass the level</p>
+        </div>
+      )}
+      {start && (
+      <><div className="one">
+          <button
+            value={numbers[0]}
+            className="button1"
+            onClick={(e) => handleClick(e)}
+          >
+            {numbers[0]}
+          </button>
+        </div><div className="two">
+            <button
+              value={numbers[1]}
+              className="button1"
+              onClick={(e) => handleClick(e)}
+            >
+              {numbers[1]}
+            </button>
+          </div><div className="three">
+            <button
+              value={numbers[2]}
+              className="button2"
+              onClick={(e) => handleClick(e)}
+            >
+              {numbers[2]}
+            </button>
+          </div><div className="four">
+            <button
+              value={numbers[3]}
+              className="button3"
+              onClick={(e) => handleClick(e)}
+            >
+              {numbers[3]}
+            </button>
+          </div><div className="five">
+            <button
+              value={numbers[4]}
+              className="button4"
+              onClick={(e) => handleClick(e)}
+            >
+              {numbers[4]}
+            </button>
+          </div><div className="six">
+            <button
+              value={numbers[5]}
+              className="button5"
+              onClick={(e) => handleClick(e)}
+            >
+              {numbers[5]}
+            </button>
+          </div><div className="seven">
+            <button
+              value={numbers[6]}
+              className="button6"
+              onClick={(e) => handleClick(e)}
+            >
+              {numbers[6]}
+            </button>
+          </div><div className="eight">
+            <button
+              value={numbers[7]}
+              className="button7"
+              onClick={(e) => handleClick(e)}
+            >
+              {numbers[7]}
+            </button>
+          </div><div className="nine">
+            <button
+              value={numbers[8]}
+              className="button8"
+              onClick={(e) => handleClick(e)}
+            >
+              {numbers[8]}
+            </button>
+          </div><div className="showValue">
+            <ul>
+              {getValues.map((val, index) => (
+                <li key={index}>{val}</li>
+              ))}
+            </ul>
+          </div><div className="Time">{formatTime(seconds)}</div></>
+      )}
     </div>
   );
 };
