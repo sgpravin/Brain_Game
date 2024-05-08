@@ -26,7 +26,7 @@ button:hover {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 350px;
+  left: 300px;
   top: 50px;
 }
 
@@ -34,7 +34,7 @@ button:hover {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 1110px;
+  left: 1050px;
   top: 30px;
 }
 
@@ -42,69 +42,69 @@ button:hover {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 1300px;
-  top: 260px;
+  left: 1200px;
+  top: 160px;
 }
 
 .four {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 930px;
-  top: 250px;
+  left: 870px;
+  top: 150px;
 }
 
 .five {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 720px;
-  top: 490px;
+  left: 670px;
+  top: 390px;
 }
 
 .six {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 630px;
-  top: 100px;
+  left: 580px;
+  top: 10px;
 }
 
 .seven {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 1130px;
-  top: 490px;
+  left: 1080px;
+  top: 390px;
 }
 
 .eight {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 460px;
-  top: 390px;
+  left: 410px;
+  top: 290px;
 }
 
 .nine {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 200px;
-  top: 300px;
+  left: 150px;
+  top: 200px;
 }
 
 .showValue {
   background-color: transparent;
   position: absolute;
-  top: 600px;
-  left: 650px;
+  top: 550px;
+  left: 500px;
 }
 
 .Time {
   position: absolute;
-  top: 600px;
-  left: 1350px;
+  top: 500px;
+  left: 1200px;
   font-size: 50px;
   color: white;
   border-style: groove;
